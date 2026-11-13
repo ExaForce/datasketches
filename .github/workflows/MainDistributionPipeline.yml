@@ -1,13 +1,11 @@
 name: Main Extension Distribution Pipeline
+# ExaForce fork: build only on pushes to build/** branches or when started by
+# hand. No schedules and no pull request builds.
 on:
   push:
     branches:
-    - v1.5
     - build/**
-  pull_request: null
   workflow_dispatch: null
-  schedule:
-  - cron: 0 2 * * *
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.head_ref || '' }}-${{
     github.base_ref || '' }}-${{ github.ref != 'refs/heads/main' || github.sha }}
