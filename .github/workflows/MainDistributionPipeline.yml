@@ -16,7 +16,7 @@ jobs:
     name: Build extension binaries
     uses: duckdb/extension-ci-tools/.github/workflows/_extension_distribution.yml@v2.0-cyanoptera
     with:
-      duckdb_version: a7e6fc10d2f12ba0784f0843ee9ec517dcba561b
+      duckdb_version: efff52352566d7909d404836d38f9393ea5580b2
       ci_tools_version: v2.0-cyanoptera
       extension_name: datasketches
       exclude_archs: 'windows_amd64;windows_amd64_mingw;windows_amd64_rtools;wasm_mvp;wasm_eh;wasm_threads'
